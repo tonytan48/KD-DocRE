@@ -1,0 +1,20 @@
+python train.py --data_dir /docred_data/ \
+--transformer_type roberta \
+--model_name_or_path roberta-large \
+--save_path checkpoints/roberta-model.pt \
+--save_last checkpoints/roberta-model-last.pt \
+--train_file train_annotated.json \
+--dev_file dev.json \
+--test_file dev.json \
+--train_batch_size 4 \
+--test_batch_size 2 \
+--gradient_accumulation_steps 1 \
+--num_labels 4 \
+--learning_rate 3e-5 \
+--classifier_lr 1e-4 \
+--max_grad_norm 1.0 \
+--drop_prob 0.0 \
+--warmup_ratio 0.06 \
+--num_train_epochs 30.0 \
+--seed 9900 \
+--num_class 97
