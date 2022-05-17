@@ -68,3 +68,14 @@ Evaluating the trained models.
 >> bash scripts/eval_roberta.sh  
 ```
 Part of the code is adapted from ATLOP: https://github.com/wzhouad/ATLOP.
+
+## Citation
+If you find our work useful, please cite our work as:
+'''
+@article{tan2022document,
+  title={Document-Level Relation Extraction with Adaptive Focal Loss and Knowledge Distillation},
+  author={Tan, Qingyu and He, Ruidan and Bing, Lidong and Ng, Hwee Tou},
+  journal={arXiv preprint arXiv:2203.10900},
+  year={2022}
+}
+'''
