@@ -58,7 +58,7 @@ class AFLoss(nn.Module):
         logit2 = logits - (1 - n_mask) * 1e30
         rank2 = F.log_softmax(logit2, dim=-1)
 
-        loss1 = - (log_prob_1 * (1 + prob_0_gamma ) * labels)  -   (prob_1_gamma  * log_prob_0) * (neg_target)
+        loss1 = - (log_prob_1 * (1 + prob_0_gamma ) * labels) 
         
         loss2 = -(rank2 * th_label).sum(1) 
 
