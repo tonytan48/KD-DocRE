@@ -39,16 +39,17 @@ Step 1: Training Teacher Model
 ```bash
 >> bash scripts/batch_roberta.sh  # for RoBERTa
 ```
+
 Step 2: Inference logits for the distantly supervised data
 ```bash
 >> bash scripts/inference_logits_roberta.sh  
 ```
-```
+
 Step 3: Pre-train the student model
 ```bash
 >> bash scripts/knowledge_distill_roberta.sh  
 ```
-```
+
 Step 4: Continue fine-tuning on the human annotated dataset.
 ```bash
 >> bash scripts/continue_roberta.sh  
