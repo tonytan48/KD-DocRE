@@ -87,7 +87,6 @@ class DocREModel_KD(nn.Module):
         #self.head_extractor = nn.Linear(3 * config.hidden_size, emb_size)
         self.tail_extractor = nn.Linear(2 * config.hidden_size, emb_size)
         #self.entity_classifier = nn.Linear( config.hidden_size, 7)
-        self.multihead_attn = MultiheadAttention(config.hidden_size, 16, kdim=config.hidden_size, vdim=config.hidden_size)
         self.entity_criterion = nn.CrossEntropyLoss()
         self.bin_criterion = nn.CrossEntropyLoss()
         self.bilinear = nn.Linear(emb_size * block_size, config.num_labels)
