@@ -1,0 +1,20 @@
+python train.py --data_dir  docred_data \
+--transformer_type bert \
+--model_name_or_path bert-base-cased \
+--knowledge_distil checkpoints/rand \
+--save_path checkpoints/bert-best-kd.pt \
+--save_last checkpoints/bert-best-kd-last.pt \
+--train_file train_distant.json \
+--dev_file dev.json \
+--test_file test.json \
+--train_batch_size 2 \
+--test_batch_size 2 \
+--gradient_accumulation_steps 4 \
+--evaluation_steps 5000 \
+--num_labels 4 \
+--learning_rate 3e-5 \
+--max_grad_norm 5.0 \
+--warmup_ratio 0.06 \
+--num_train_epochs 50.0 \
+--seed 66 \
+--num_class 97
