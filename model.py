@@ -5,7 +5,6 @@ from long_seq import process_long_input
 from losses import AFLoss
 import torch.nn.functional as F
 from axial_attention import AxialAttention, AxialImageTransformer
-from multihead_attention import MultiheadAttention
 import numpy as np
 import math
 from itertools import accumulate
