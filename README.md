@@ -72,10 +72,16 @@ Part of the code is adapted from ATLOP: https://github.com/wzhouad/ATLOP.
 ## Citation
 If you find our work useful, please cite our work as:
 ```bibtex
-@article{tan2022document,
-  title={Document-Level Relation Extraction with Adaptive Focal Loss and Knowledge Distillation},
-  author={Tan, Qingyu and He, Ruidan and Bing, Lidong and Ng, Hwee Tou},
-  journal={arXiv preprint arXiv:2203.10900},
-  year={2022}
+@inproceedings{tan-etal-2022-document,
+    title = "Document-Level Relation Extraction with Adaptive Focal Loss and Knowledge Distillation",
+    author = "Tan, Qingyu  and
+      He, Ruidan  and
+      Bing, Lidong  and
+      Ng, Hwee Tou",
+    booktitle = "Findings of ACL",
+    year = "2022",
+    url = "https://aclanthology.org/2022.findings-acl.132",
+
+
 }
 ```
