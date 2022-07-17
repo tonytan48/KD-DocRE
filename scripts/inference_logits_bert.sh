@@ -1,7 +1,7 @@
 python train.py --data_dir  docred_data \
 --transformer_type bert \
 --model_name_or_path bert-base-cased \
---load_path checkpoints/{model_name}.pt \
+--load_path checkpoints/{model_name} \
 --train_file train_distant.json \
 --dev_file dev.json \
 --test_file test.json \
