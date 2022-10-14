@@ -15,7 +15,7 @@ Implementation of Document-level Relation Extraction with Knowledge Distillation
 * tqdm
 
 ## Dataset
-The [DocRED](https://www.aclweb.org/anthology/P19-1074/) dataset can be downloaded following the instructions at [link]
+The [DocRED](https://www.aclweb.org/anthology/P19-1074/) dataset can be downloaded following the instructions at https://github.com/thunlp/DocRED
 ```
 root
  |-- dataset
@@ -29,6 +29,19 @@ root
 
  |-- meta
  |    |-- rel2id.json
+ 
+```
+
+However, recent works have shown that the DocRED dataset is incompletely annotated. There are more than 60% of the triples that are not annotated in the evaluation split of DocRED. Therefore, it may not serve as a fair evaluation to the task of document-level relation extraction.
+
+We would like to recommend to use the [Re-DocRED](https://arxiv.org/abs/2205.12696) dataset for this task. This dataset is a revised version of the original DocRED dataset and resolved the false negative problem in DocRED. The Re-DocRED dataset can be downloaded at : https://github.com/tonytan48/Re-DocRED.
+The files contained in Re-DocRED are:
+```
+root
+ |-- data
+ |    |-- train_revised.json        
+ |    |-- dev_revised.json
+ |    |-- test_revised.json
 ```
 
 ## Training and Evaluation
