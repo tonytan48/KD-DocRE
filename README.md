@@ -31,6 +31,7 @@ root
  |    |-- rel2id.json
  
 ```
+### Updates for Re-DocRED
 
 However, recent works have shown that the DocRED dataset is incompletely annotated. There are more than 60% of the triples that are not annotated in the evaluation split of DocRED. Therefore, it may not serve as a fair evaluation to the task of document-level relation extraction.
 
