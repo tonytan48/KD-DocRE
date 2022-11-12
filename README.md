@@ -1,6 +1,19 @@
 # KD-DocRE
-Implementation of Document-level Relation Extraction with Knowledge Distillation and Adaptive Focal Loss - Findings of ACL 2022
+Implementation of Document-level Relation Extraction with Knowledge Distillation and Adaptive Focal Loss - Findings of ACL 2022 (https://aclanthology.org/2022.findings-acl.132)
 
+### Updates for Re-DocRED
+
+We would also like to highlight our subsequent work on the revision of DocRED. We have shown that the DocRED dataset is incompletely annotated. There are more than 60% of the triples that are not annotated in the evaluation split of DocRED. Therefore, it may not serve as a fair evaluation to the task of document-level relation extraction. 
+
+We would like to recommend to use the [Re-DocRED](https://arxiv.org/abs/2205.12696) dataset for this task. This dataset is a revised version of the original DocRED dataset and resolved the false negative problem in DocRED. Models trained and evaluated on Re-DocRED gains around 13 F1 compared to DocRED. The Re-DocRED dataset can be downloaded at : https://github.com/tonytan48/Re-DocRED. The leaderboard of Re-DocRED is hosted on Paperswithcode: https://paperswithcode.com/sota/relation-extraction-on-redocred. 
+The files contained in Re-DocRED are:
+```
+root
+ |-- data
+ |    |-- train_revised.json        
+ |    |-- dev_revised.json
+ |    |-- test_revised.json
+```
 
 ## Required Packages
 * Python (tested on 3.7.4)
@@ -31,19 +44,7 @@ root
  |    |-- rel2id.json
  
 ```
-### Updates for Re-DocRED
 
-However, recent works have shown that the DocRED dataset is incompletely annotated. There are more than 60% of the triples that are not annotated in the evaluation split of DocRED. Therefore, it may not serve as a fair evaluation to the task of document-level relation extraction.
-
-We would like to recommend to use the [Re-DocRED](https://arxiv.org/abs/2205.12696) dataset for this task. This dataset is a revised version of the original DocRED dataset and resolved the false negative problem in DocRED. The Re-DocRED dataset can be downloaded at : https://github.com/tonytan48/Re-DocRED.
-The files contained in Re-DocRED are:
-```
-root
- |-- data
- |    |-- train_revised.json        
- |    |-- dev_revised.json
- |    |-- test_revised.json
-```
 
 ## Training and Evaluation
 ### DocRED
@@ -97,5 +98,13 @@ If you find our work useful, please cite our work as:
     url = "https://aclanthology.org/2022.findings-acl.132",
 
 
+}
+
+@inproceedings{tan2022revisiting,
+  title={Revisiting DocRED – Addressing the False Negative Problem in Relation Extraction},
+  author={Tan, Qingyu and Xu, Lu and Bing, Lidong and Ng, Hwee Tou and Aljunied, Sharifah Mahani},
+  booktitle={Proceedings of EMNLP},
+  url={https://arxiv.org/abs/2205.12696},
+  year={2022}
 }
 ```
